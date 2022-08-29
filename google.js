@@ -8,7 +8,7 @@ const {GOOGLE_SHEET_ID, CLIENT_EMAIL, PRIVATE_KEY} = process.env;
 
   await doc.useServiceAccountAuth({
     client_email: CLIENT_EMAIL,
-    private_key: PRIVATE_KEY
+    private_key: PRIVATE_KEY.replace(/\\n/gm, '\n')
   });
  
   await doc.loadInfo();
