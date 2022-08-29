@@ -26,10 +26,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - name: npm install
+      run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - run: node ./google.js
+    - name: googlespread-sheet
+      run: node ./google.js
       env:
        GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
        CLIENT_EMAIL: ${{ secrets.CLIENT_EMAIL }}
