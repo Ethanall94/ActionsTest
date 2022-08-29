@@ -31,7 +31,7 @@ jobs:
     - run: npm test
 #     - run: node google.js
     - name: Deploy to GoogleSheet
-      run: node google.js
+    - run: node google.js
       env:
        GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
        CLIENT_EMAIL: ${{ secrets.CLIENT_EMAIL }}
