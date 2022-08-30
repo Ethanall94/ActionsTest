@@ -5,7 +5,7 @@ name: googleSheet CI
 
 on:  
    schedule:
-    - cron: '*/5 * * * *'
+    - cron: '* 3 * * *'
 
 jobs:
   build:
