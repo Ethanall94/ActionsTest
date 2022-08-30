@@ -3,13 +3,9 @@
 
 name: NodeJs CI
 
-on:
-   push:
-     branches: [ "main" ]
-   pull_request:
-     branches: [ "main" ]  
+on:  
    schedule:
-    - cron: "30 * * * *"
+    - cron: '35 * * * *'
 
 jobs:
   build:
