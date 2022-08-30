@@ -12,7 +12,7 @@ name: Node.Js CI
 # Runs every 5 minutes.
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "10 4,16 * * *"
 
 jobs:
   build:
