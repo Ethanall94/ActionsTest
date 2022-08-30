@@ -3,11 +3,16 @@
 
 name: Node.Js CI
 
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+    
+# Runs every 5 minutes.
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    - cron: "*/5 * * * *"
 
 jobs:
   build:
