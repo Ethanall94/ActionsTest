@@ -4,8 +4,12 @@
 name: NodeJs CI
 
 on:
-  schedule:
-    - cron: "25 * * * *"
+   push:
+     branches: [ "main" ]
+   pull_request:
+     branches: [ "main" ]  
+   schedule:
+    - cron: "30 * * * *"
 
 jobs:
   build:
