@@ -15,5 +15,9 @@ const {GOOGLE_SHEET_ID, CLIENT_EMAIL, PRIVATE_KEY} = process.env;
 
   const sheet = doc.sheetsByIndex[0];
 
+  await sheet.clear();
+  const PK = ["name", "thumbnail"]
+  await sheet.setHeaderRow(PK);
+  
   await sheet.addRows(mapPaging.total);
 })();
